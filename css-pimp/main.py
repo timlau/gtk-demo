@@ -1,10 +1,11 @@
 # Load Gtk
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, GLib
+from gi.repository import Gtk, Gdk, GLib  # type: ignore
 
 builder = Gtk.Builder()
 builder.add_from_file('main.ui')
+
 
 def apply_css():
     screen = Gdk.Screen.get_default()
@@ -16,18 +17,17 @@ def apply_css():
     context = Gtk.StyleContext()
     context.add_provider_for_screen(screen, css_provider,
                                     Gtk.STYLE_PROVIDER_PRIORITY_USER)
-    
+
 
 def on_button_clicked(widget):
     label = widget.get_label()
-    print(f'Button {label} Pressed')    
+    print(f'Button {label} Pressed')
     if label == 'Toggle Overlay':
         overlay = builder.get_object('overlay')
         visible = overlay.get_visible()
         overlay.set_visible(not visible)
-        
-        
-    
+
+
 # When the application is launched…
 def on_activate(app):
     win = builder.get_object('mainwin')
