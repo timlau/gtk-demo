@@ -16,7 +16,7 @@ class App(Gtk.Application):
     def on_activate(self, app):
         self.window = self.builder.get_object('mainwin')
         self.window.set_application(app)
-        self.window.set_title("CSS Test")
+        self.window.set_title("CSS in GTK3 Test")
         self.window.set_default_size(800, 800)
         # Setup main box
         self.main = self.builder.get_object('main')

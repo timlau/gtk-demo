@@ -18,7 +18,7 @@ class App(Gtk.Application):
     def on_activate(self, app):
         self.window = self.builder.get_object('mainwin')
         self.window.set_application(app)
-        self.window.set_title("CSS Test")
+        self.window.set_title("CSS in GTK4 Test")
         self.window.set_default_size(800, 800)
         # Setup main box
         self.main = self.builder.get_object('main')
@@ -40,8 +40,7 @@ class App(Gtk.Application):
         btn.props.hexpand = True
         btn.connect('clicked', self.on_button_clicked)
         self.overlay.append(btn)
-        self.add_custom_styling(self.main)
-        self.add_custom_styling(self.overlay)
+        self.add_custom_styling(self.window)
         self.window.present()
 
     def on_button_clicked(self, widget):

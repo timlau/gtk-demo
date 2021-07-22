@@ -1,3 +1,7 @@
+window {
+    background-color: teal;
+}
+
 .overlay {
     background-color: burlywood;
     margin: 200px 100px 400px 100px;
@@ -7,8 +11,8 @@
 }    
 
 .main {
-    background-color: teal;
-    margin: 30px;
+    background: rgb(242,93,9);
+    background: linear-gradient(180deg, rgba(242,93,9,1) 0%, rgba(243,255,0,1) 100%);    margin: 30px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
