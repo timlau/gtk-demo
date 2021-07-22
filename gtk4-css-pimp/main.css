@@ -1,0 +1,58 @@
+.overlay {
+    background-color: burlywood;
+    margin: 200px 100px 400px 100px;
+    border: 5px solid rgba(255,0,0,.5);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+}    
+
+.main {
+    background-color: teal;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5)
+}
+
+.main button {
+    background: palevioletred;
+    color: black;
+    border: 1px solid white;
+    transition: all 300ms ease-in-out;
+}
+
+
+.main button:hover {
+    box-shadow: 0 0 10px black;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    
+}
+
+.overlay button {
+    background: orangered;
+    color: black;
+    border: 0;
+}
+
+.overlay button:hover {
+    animation: show_shadow 1s ease-in-out infinite;
+}
+
+@keyframes show_shadow {
+    0% {
+        box-shadow: 0 0 0 0px red,
+        0 0 0 0px yellow,
+        0 0 0 0px orange;
+    }
+    50% {
+        box-shadow: 0 0 0 15px red,
+        0 0 0 10px yellow,
+        0 0 0 5px orange;
+    }
+    100% {
+        box-shadow: 0 0 0 0px red,
+        0 0 0 0px yellow,
+        0 0 0 0px orange;
+    }
+}
