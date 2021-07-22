@@ -8,7 +8,7 @@ class App(Gtk.Application):
     __gtype_name__ = 'GtkMyApp'
 
     def __init__(self):
-        Gtk.Application.__init__(self, application_id="dk.rasmil.csspimp")
+        Gtk.Application.__init__(self, application_id="dk.rasmil.gtk3csspimp")
         self.connect("activate", self.on_activate)
         self.builder = Gtk.Builder()
         self.builder.add_from_file('main.ui')
